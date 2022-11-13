@@ -1,0 +1,74 @@
+//consultar maestros
+GET
+http://localhost:8080/api/escuela/maestros
+
+//consultar alumnos
+GET
+http://localhost:8080/api/escuela/alumnos
+
+//Agregar maestro
+POST
+http://localhost:8080/api/escuela/maestros
+{
+    "nombre":"Victor",
+    "apellido_1": "Flores",
+    "apellido_2": "Toledo",
+    "fecha_na": "22-11-24",
+    "curp": "csdasfd3",
+    "no_empleado": 2
+}
+
+//Agregar alumno
+POST
+http://localhost:8080/api/escuela/alumnos
+
+{
+    "nombre":"Victor",
+    "apellido_1": "Flores",
+    "apellido_2": "Toledo",
+    "fecha_na": "22-11-24",
+    "curp": "43543",
+    "matricula": "20213TN059"
+}
+
+//Calificar a estudiantes
+PUT
+http://localhost:8080/api/escuela/calificar
+{
+    "matematicas": 10.0,
+    "historia": 10.0,
+    "engles": 10.0,
+    "poo": 10.0,
+    "matricula": "20213TN059"
+}
+ 
+//actualizar maestro
+PUT
+http://localhost:8080/api/escuela/maestros
+{
+    "nombre":"Victor",
+    "apellido_1": "Flores",
+    "apellido_2": "Toledo",
+    "fecha_na": "22-11-24",
+    "curp": "csdasfd3",
+    "no_empleado": 2
+}
+
+//actualizar alumno
+PUT
+http://localhost:8080/api/escuela/alumnos
+{
+    "nombre":"Victor",
+    "apellido_1": "Flores",
+    "apellido_2": "Toledo",
+    "fecha_na": "22-11-24",
+    "curp": "csdasfd3",
+    "matricula": "cdsds",
+    "materia_id": 1
+}
+
+//Consultar calidicadcions de alumnos
+http://localhost:8080/api/escuela/calificaciones
+
+//Consultar promedio
+http://localhost:8080/api/escuela/promedio
