@@ -10,6 +10,7 @@ public interface Repository<T> { //La te es para tomar las referencias, atributo
     List<T> profesoresAll();
 
     List<T> califiAlumnos();
+    List<T> promedioAlumnos();
     Response<T> calificarAlumno(T object);
 
     Response<T> alumnoSave(T object);

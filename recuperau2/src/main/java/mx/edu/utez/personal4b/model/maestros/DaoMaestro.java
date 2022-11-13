@@ -60,6 +60,11 @@ public class DaoMaestro implements Repository<BeanMaestro> {
     }
 
     @Override
+    public List<BeanMaestro> promedioAlumnos() {
+        return null;
+    }
+
+    @Override
     public Response<BeanMaestro> calificarAlumno(BeanMaestro object) {
         return null;
     }

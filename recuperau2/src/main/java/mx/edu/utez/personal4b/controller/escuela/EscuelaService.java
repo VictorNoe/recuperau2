@@ -37,6 +37,13 @@ public class EscuelaService {
         return new DaoAlumno().califiAlumnos();
     }
 
+    @GET
+    @Path("/promedios")
+    @Produces(value = {"application/json"})
+    public List<BeanAlumno> promedioAlumnos(){
+        return new DaoAlumno().promedioAlumnos();
+    }
+
     @POST
     @Path("/alumnos")
     @Produces(value = {"application/json"})

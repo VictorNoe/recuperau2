@@ -85,6 +85,33 @@ public class DaoAlumno implements Repository<BeanAlumno> {
     }
 
     @Override
+    public List<BeanAlumno> promedioAlumnos() {
+        List<BeanAlumno> alumnos = new ArrayList<>();
+        BeanAlumno alumno = null;
+        try {
+            conn = connection.getConnection();
+            String query = "SELECT * FROM alumnos;";
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                alumno = new BeanAlumno();
+                alumno.setId(rs.getLong("id"));
+                alumno.setNombre(rs.getString("nombre"));
+                alumno.setApellido_1(rs.getString("apellido_1"));
+                alumno.setApellido_2(rs.getString("apellido_2"));
+                alumno.setPromedio(rs.getDouble("promedio"));
+                alumnos.add(alumno);
+            }
+        }catch (SQLException e){
+            Logger.getLogger(DaoAlumno.class.getName())
+                    .log(Level.SEVERE, "Error -> findAll"+ e.getMessage());
+        } finally {
+            connection.close(conn,ps,rs);
+        }
+        return alumnos;
+    }
+
+    @Override
     public Response<BeanAlumno> calificarAlumno(BeanAlumno alumno) {
         try {
             conn = connection.getConnection();

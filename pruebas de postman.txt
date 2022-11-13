@@ -1,3 +1,5 @@
+Se me olvido meter la base por eso hay dos commit
+
 //consultar maestros
 GET
 http://localhost:8080/api/escuela/maestros
@@ -63,7 +65,7 @@ http://localhost:8080/api/escuela/alumnos
     "apellido_2": "Toledo",
     "fecha_na": "22-11-24",
     "curp": "csdasfd3",
-    "matricula": "cdsds",
+    "matricula": "20213TN059",
     "materia_id": 1
 }
 
